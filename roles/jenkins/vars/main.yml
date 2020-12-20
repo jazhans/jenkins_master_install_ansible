@@ -1,0 +1,17 @@
+---
+# vars file for roles/jenkins
+your_user: < your sudo user >
+home_dir: "/home/{{ your_user }}""
+mkcert_cert: "{{ home_dir }}/localhost+2.pem"
+mkcert_key: "{{ home_dir }}/localhost+2-key.pem"
+
+packages:
+- unzip
+- software-properties-common
+- libnss3-tools
+- openjdk-8-jre
+- openjdk-8-jdk
+- nginx
+- fail2ban
+- ufw
+- jenkins

@@ -1,0 +1,16 @@
+---
+# handlers file for roles/jenkins
+- name: Start Jenkins Service
+  service:
+    name: jenkins
+    state: started
+
+- name: Start Nginx Service
+  service:
+    name: nginx
+    state: restarted
+
+- name: Start fail2ban Service
+  service: 
+    name: fail2ban
+    state: started
